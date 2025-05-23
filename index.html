@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Enrollment Form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Enrollment Form</h2>
+
+    <div class="section">
+      <label for="rollno">Roll No</label>
+      <input type="text" id="rollno" onblur="getStudent()" autocomplete="off" />
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <div class="col-2">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" disabled autocomplete="off" />
+        </div>
+        <div class="col-2">
+          <label for="cls">Class</label>
+          <input type="text" id="cls" disabled autocomplete="off" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <div class="col-2">
+          <label for="birth">Birth Date</label>
+          <input type="date" id="birth" disabled />
+        </div>
+        <div class="col-2">
+          <label for="enroll">Enrollment Date</label>
+          <input type="date" id="enroll" disabled />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <label for="address">Address</label>
+      <input type="text" id="address" disabled autocomplete="off" />
+    </div>
+
+    <div class="buttons">
+      <button onclick="saveStudent()" id="saveBtn" disabled>Save</button>
+      <button onclick="updateStudent()" id="updateBtn" disabled>Update</button>
+      <button onclick="resetForm()" id="resetBtn">Reset</button>
+    </div>
+
+    <input type="hidden" id="rec_no" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
